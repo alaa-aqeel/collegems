@@ -4,8 +4,62 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "27034394b1e7ad388ad7ef3ebb714470",
+    "content-hash": "428adf64c00174139736f7ae7a3ab251",
     "packages": [
+        {
+            "name": "benjamincrozat/laravel-dropbox-driver",
+            "version": "2.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/benjamincrozat/laravel-dropbox-driver.git",
+                "reference": "d2da72ee22a3fb1d4720c7c8dac7aaf0fd038d5e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/benjamincrozat/laravel-dropbox-driver/zipball/d2da72ee22a3fb1d4720c7c8dac7aaf0fd038d5e",
+                "reference": "d2da72ee22a3fb1d4720c7c8dac7aaf0fd038d5e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1",
+                "spatie/flysystem-dropbox": "^1.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "3.*",
+                "phpunit/phpunit": "5.*|6.*|7.*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BC\\Laravel\\DropboxDriver\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BC\\Laravel\\DropboxDriver\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "WTFPL"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Crozat",
+                    "email": "benjamin@croz.at"
+                }
+            ],
+            "description": "Dropbox driver for Laravel.",
+            "homepage": "https://github.com/benjamincrozat/laravel-dropbox-driver",
+            "keywords": [
+                "driver",
+                "dropbox",
+                "laravel"
+            ],
+            "time": "2018-12-10T12:53:41+00:00"
+        },
         {
             "name": "defuse/php-encryption",
             "version": "v2.2.1",
