@@ -27,12 +27,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Schema::enableForeignKeyConstraints();
-        Schema::defaultStringLength(191);
+
 
         if (env('APP_ENV') === 'production' ) {
             \URL::forceScheme('https');
         }
+
+        Schema::enableForeignKeyConstraints();
+        Schema::defaultStringLength(191);
 
         try {
             View::share('colleges', College::all());
