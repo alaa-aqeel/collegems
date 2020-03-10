@@ -10,7 +10,7 @@
         <div class="user_info">
             <div class="circle">
                 <img class="profile-pic" style="max-width: 100%;width: 100%;"
-                src='{{ asset("storage/images/users/".Auth::user()->avatar) }}'>
+                src="{{ Storage::get('/public/images/users/'.Auth::user()->avatar) }}">
             </div>
             @if($auth)
                 <div class="p-image">
