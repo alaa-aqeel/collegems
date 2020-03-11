@@ -26,9 +26,9 @@ Route::middleware(['auth:api'])->group(function () {
 
 Route::middleware(['admin:api','auth:api'])->group(function () {
 
-    // Route::put('/profile', 'ProfileController@update');
-    Route::resource('/college', 'Api\CollegeController');
-    Route::resource('/user', 'Api\UsersController');
-    Route::resource('/project', 'Api\ProjectsController');
-    Route::resource('/tran', 'Api\TraniningController');
+
+    Route::resource('/college', 'API\CollegeController');
+    Route::resource('/user', 'API\UsersController');
+    Route::resource('/project', 'API\ProjectsController');
+    Route::resource('/tran', 'API\TraniningController');
 });
