@@ -10,17 +10,19 @@ class Storage {
      */
     static public function url($imgname, $for = 'users'){
         $image = null ;
-        switch (env('FILESYSTEM_DRIVER')){
-            case 'dropbox':
-                $image = Cloud::disk('dropbox')->getDriver()
-                    ->getAdapter()
-                    ->getClient()
-                    ->getTemporaryLink("public/images/$for/$imgname");
-                break;
-            case 'local':
-                $image = Cloud::disk("local")->url("images/$for/$imgname");
-                break;
-        }
+        try {
+            switch (env('FILESYSTEM_DRIVER')){
+                case 'dropbox':
+                    $image = Cloud::disk('dropbox')->getDriver()
+                        ->getAdapter()
+                        ->getClient()
+                        ->getTemporaryLink("public/images/$for/$imgname");
+                    break;
+                case 'local':
+                    $image = Cloud::disk("local")->url("images/$for/$imgname");
+                    break;
+            }
+        } catch (\Throwable $th) { return '(notfound)'; }
 
         return $image;
 

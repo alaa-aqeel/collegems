@@ -28,12 +28,11 @@ class ProjectsController extends Controller
                 'college' => $project->college->name,
                 'create' => $project->create_at,
                 'description' => $project->description,
-                 'link' =>  $project->link,
-                 'active' =>  $project->active,
+                'link' =>  $project->link,
+                'active' =>  $project->active,
             ]
         ]);
     }
-
 
     /**
      * Update the specified resource in storage.
@@ -63,4 +62,15 @@ class ProjectsController extends Controller
         ]);
     }
 
+    public function destroy(Request $request, $id){
+        $project = Project::find($id);
+
+        if(!$project){
+
+            return response()->json(['msg' => 'NOT FOUND'], 404);
+        }
+
+        $project->delete();
+        return response()->json(['msg' => 'Successfuly delete']);
+    }
 }

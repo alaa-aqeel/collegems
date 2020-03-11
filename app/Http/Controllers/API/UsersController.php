@@ -62,5 +62,19 @@ class UsersController extends Controller
         ]);
     }
 
+
+    public function destroy(Request $request, $id){
+        $user = User::find($id);
+
+        if(!$user){
+
+            return response()->json(['msg' => 'NOT FOUND'], 404);
+        }
+
+        $user->delete();
+        return response()->json(['msg' => 'Successfuly delete']);
+    }
+
 }
+
 
