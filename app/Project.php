@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Custom\Storage;
 
 class Project extends Model
 {
@@ -14,6 +15,14 @@ class Project extends Model
         'user_id', 'user_id', 'college_id', 'active'
     ];
 
+
+    /*
+     *  GET image for the project from storage cloud
+     */
+    function getImage(){
+
+        return Storage::url($this->image, 'projects');
+    }
 
     function users(){
 

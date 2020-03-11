@@ -36,7 +36,7 @@
                 @foreach ($projects as $project)
                     <div class="col-sm-6 col-lg-3">
                         <div class="card">
-                            <img src='{{ asset("/storage/images/projects/$project->image") }}' class="card-img-top" alt="">
+                            <img src='{{ $project->getImage() }}' class="card-img-top" alt="">
                             <div class="card-body " >
                                 {{-- <img src="/storage/images/users/{{ $project->users[0]->avatar }}"> --}}
                                 <h4 class="card-title" style="margin-top:-15px ">

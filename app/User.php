@@ -6,7 +6,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
-use Illuminate\Support\Facades\Storage;
+use App\Custom\Storage;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -33,22 +33,10 @@ class User extends Authenticatable implements MustVerifyEmail
      *  GET Avatar for the user from storage cloud
      */
     function getAvatar(){
-        $image = null ;
-        switch (env('FILESYSTEM_DRIVER')){
-            case 'dropbox':
-                $image = Storage::disk('dropbox')->getDriver()
-                    ->getAdapter()
-                    ->getClient()
-                    ->getTemporaryLink('public/images/users/'.$this->avatar);
-                break;
-            case 'local':
-                $image = Storage::disk("local")->url('images/users/'.$this->avatar);
-                break;
-        }
 
-        return $image;
-
+        return Storage::url($this->image, 'users');
     }
+
 
     /* Relationship  Many To Many
      *

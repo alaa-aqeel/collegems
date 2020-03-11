@@ -19,7 +19,7 @@
         @component('components.navbars.itemnav')
             <div class="users">
                 <div id='nav-avatar' class="img-circle">
-                    <img src="/storage/images/users/{{Auth::user()->avatar}}" alt="">
+                    <img src="{{ Auth::user()->getAvatar() }}" alt="">
                 </div>
                 <div class="dropdown nav-item">
                     <button class="btn nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
