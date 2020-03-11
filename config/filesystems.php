@@ -67,6 +67,7 @@ return [
         'dropbox' => [
             'driver' => 'dropbox',
             'app_secret' => env('DROPBOX_APP_SECRET'),
+            // 'url' => env('AWS_URL'),
             'token' => env('DROPBOX_TOKEN'),
         ],
 
