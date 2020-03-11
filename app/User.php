@@ -34,7 +34,7 @@ class User extends Authenticatable implements MustVerifyEmail
      */
     function getAvatar(){
 
-        return Storage::url($this->image, 'users');
+        return Storage::url($this->avatar, 'users');
     }
 
 

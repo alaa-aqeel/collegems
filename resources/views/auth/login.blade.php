@@ -4,8 +4,8 @@
 
 @section('style')
     <style>
-    
-    
+
+
 
 
         @media (min-width: 220px) and (max-width: 970px) {
@@ -41,7 +41,7 @@
 
             }
 
-        
+
 
         }
 
@@ -75,7 +75,7 @@
                 height: 50%;
             }
 
-        
+
 
         }
     </style>
@@ -96,16 +96,17 @@
                 </div>
             </div>
             <div class="r-lColumn  card_login col-sm-12 col-lg-4">
-                @foreach ($errors->all() as $message)
-                    <div class="alert alert-danger " role="alert"> 
-                        {{ $message }}
-                    </div>
-                @endforeach
+
                 <form method="POST" action="{{ route('login') }}">
+                    @foreach ($errors->all() as $message)
+                        <div class="alert alert-danger " role="alert">
+                            {{ $message }}
+                        </div>
+                    @endforeach
                     @csrf
                     {{-- Email  --}}
                     <div class="form-group">
-                        <span class="input-icons"> 
+                        <span class="input-icons">
                             <i class="fa fa-envelope fa-2x"></i>
                         </span>
                         <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="off" placeholder="{{ __('E-Mail Address') }}" autofocus>
@@ -116,7 +117,7 @@
                         @enderror --}}
                     </div>
                     <div class="form-group">
-                        <span class="input-icons"> 
+                        <span class="input-icons">
                                 <i class="fa fa-lock fa-2x"></i>
                         </span>
                         <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="{{ __('Password') }}" autocomplete="new-password">

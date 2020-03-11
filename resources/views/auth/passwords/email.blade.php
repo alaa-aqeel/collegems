@@ -16,16 +16,17 @@
                 </div>
             </div>
             <div class="r-lColumn  card_login col-sm-12 col-lg-4">
-                @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
-                    </div>
-                @endif
+
                 <form method="POST" action="{{ route('password.email') }}">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
                     @csrf
                     <h2 style="border-left: 4px solid #6c63ff;text-align: center" class='mb-2'>{{ __('Reset Password') }}</h2>
                     <div class="form-group">
-                            <span class="input-icons"> 
+                            <span class="input-icons">
                                 <i class="fa fa-envelope fa-2x"></i>
                             </span>
                             <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="{{ __('E-Mail Address') }}" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
@@ -45,5 +46,5 @@
                 </form>
             </div>
         </div>
-    </div>   
+    </div>
 @endsection
