@@ -55,6 +55,7 @@ class UsersController extends Controller
         return response()->json([
             'user' => [
                 'id' => $user->id,
+                'avatar'   => $user->getAvatar(),
                 'fullname' => $user->fullname,
                 'active'   => $user->active,
                 'role'     => $user->role_id,

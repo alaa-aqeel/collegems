@@ -20,7 +20,7 @@
                 <div class="row">
                     {{ $users }}
                     @foreach ($users as $user)
-                        <div class="col-4">
+                        <div class="col-4" id='{{ $user->id."-card" }}'>
                             <div class="d-flex flex-row border rounded">
                                     <div class="p-0 " style="width: 40%;">
                                         <img  id='{{ $user->id }}-avatar' src="{{ $user->getAvatar() }}" class="img-thumbnail border-0 " />
@@ -102,7 +102,10 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button id='saveChanges' type="button" class="btn btn-primary">Save </button>
+                    <button id='saveChanges' type="button" class="btn btn-primary"> <i class="fa fa-save"></i> </button>
+                    <button id='deleteUser' type="button" class="btn btn-danger float-left" >
+                        {{-- <i class="fa fa-trash" aria-hidden="true"></i> --}}
+                    </button>
                 </div>
             </div>
         </div>
