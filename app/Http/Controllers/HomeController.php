@@ -10,6 +10,7 @@ class HomeController extends Controller
     function index(){
 
         if (auth()->user()){
+            if(!auth()->user()->email_verified_at){ return redirect('/email/verify');  }
             if (auth()->user()->college){
                 $project = College::find(auth()->user()->college->id)->projects()->where('active', 1)->paginate(15);
 
