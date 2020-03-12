@@ -16,7 +16,7 @@ class College extends Model
         return $this->hasMany('App\User')
                 ->where('role_id',
                         Role::where('name', 'admin')
-                            ->fist()
+                            ->first()
                             ->id
             );
     }
@@ -25,7 +25,7 @@ class College extends Model
         return $this->hasMany('App\User')
             ->where('role_id',
                         Role::where('name', 'student')
-                                ->fist()
+                                ->first()
                                 ->id
                     );
     }
