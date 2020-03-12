@@ -19,11 +19,11 @@ $(function(){
             $('#settingModal #deleteUser').attr('id', $(this).parent().attr('id') ).attr('disabled', false).text('Delete Account')
 
             if(resp.data.user.active != 0){
-                $('#settingModal #userActive').addClass('btn-success').removeClass('btn-danger')
-                $('#settingModal #userActive').find('i').addClass('fa-toggle-on').removeClass('fa-toggle-off')
+                $('#settingModal #user-active').addClass('btn-success').removeClass('btn-danger')
+                $('#settingModal #user-active').find('i').addClass('fa-toggle-on').removeClass('fa-toggle-off')
             }else{
-                $('#settingModal #userActive').removeClass('btn-success').addClass('btn-danger')
-                $('#settingModal #userActive').find('i').removeClass('fa-toggle-on').addClass('fa-toggle-off')
+                $('#settingModal #user-active').removeClass('btn-success').addClass('btn-danger')
+                $('#settingModal #user-active').find('i').removeClass('fa-toggle-on').addClass('fa-toggle-off')
             }
             $('#settingModal').modal('show')
             $(this).find('.fa').toggleClass('fa-spin');
@@ -37,12 +37,12 @@ $(function(){
 
     })
 
-    $('#settingModal #saveChanges').click(function(){
+    $('#settingModal #saveChanges').click(function(e){
         $(this).attr('disabled', '').html('<i class="fa fa-spinner fa-pulse"></i>')
-
+        // e.pravateEnvent
         let data = {
-            'active' : $('#settingModal #userActive').val() ,
-            'role' : $('#settingModal #userRole').val()
+            'active' : $('#settingModal #user-active').val() ,
+            'role' : $('#settingModal #user-role').val()
         }
 
         axios.put(`/api/user/${ $(this).attr('id') }`, data).then(resp=>{
