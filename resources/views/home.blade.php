@@ -32,7 +32,7 @@
                 <!--end header-->
                 @if(!Auth::user()->active && Auth::user()->email_verified_at )
                     <div class="text-center">
-                        <h4 class='text-dark shadow-sm bg-light m-0'>
+                        <h4 class='text-dark shadow-sm bg-light m-0 p-5'>
                             Your Account need active from your college. wait 24hours to active
                         </h4>
                     </div>
