@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mt-5">
 
-    <div class="card-header">{{ __('Verify Your Email Address') }}</div>
+    <div class="card-header bg-white">{{ __('Verify Your Email Address') }}</div>
 
     <div class="card-body">
         @if (session('resent'))
@@ -12,7 +12,7 @@
             </div>
         @endif
 
-        <h3 class="text-primary"> {{ __('Before continuing, Please check your email for a verification link.') }} </h3>
+        <h4 class="text-secondary"> {{ __('Before continuing, Please check your email for a verification link.') }} </h4>
         <h5>
             {{ __('If you did not receive the email') }},
             <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
