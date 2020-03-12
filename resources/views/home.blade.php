@@ -30,6 +30,11 @@
 
             <!-- Demo content -->
                 <!--end header-->
+                @if(!Auth::user()->active)
+                    <div class="row">
+                        <h5 class='secondary'> Your Account need active from your college. wait to 24hours plase to active  </h5>
+                    </div>
+                @endif
                 <div class="row">
                     @if($projects)
                         Project College {{ $projects->count() }}
