@@ -28,16 +28,13 @@
                         <i class="fa fa-caret-up fa-5x  triangle-up visible-sm"></i>
                         <li> <a class="dropdown-item" href="/profile"> <i class="fa fa-user"></i> profile</a></li>
 
+                        @if(Auth::user()->active)
                             <li>
-                                @if(Auth::user()->active)
-                                    <a class="dropdown-item" href="/project/create">
-                                @else
-                                    <a class="dropdown-item text-danger" href="#1" title="Need active to add">
-                                @endif
-
+                                <a class="dropdown-item" href="/project/create">
                                     <i class="fa fa-plus-circle"></i> Add Project
                                 </a>
                             </li>
+                         @endif
 
 
                         @if(Auth::user()->role->name == 'admin')
