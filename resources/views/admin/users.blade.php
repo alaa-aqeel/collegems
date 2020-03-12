@@ -86,9 +86,10 @@
                             <a id='user-email' style="display: inline" href="#!"> email@local.com </a>
                             <i id='user-valid' class="fa text-success" ></i>
                             {{-- <span> Email is verified </span> --}}
+                            <strong >Have Project  <span id='user-project'></span> </strong>
                         </p>
                         <hr>
-                        <strong >Project Have <span id='user-project'></span> </strong>
+
                     </div>
                     <div>
                         <div class="form-group text-center">
