@@ -3,7 +3,9 @@
 namespace App;
 
 use App\User;
+use App\Role;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Builder;
 
 class College extends Model
 {
@@ -14,23 +16,16 @@ class College extends Model
 
     function admin(){
         return $this->hasMany('App\User')
-                ->where('role_id',
-                        Role::where('name', 'admin')
-                            ->first()
-                            ->id
-            );
+                ->whereHas('role', function (Builder $query) {
+                    $query->where('name','admin');
+                });
     }
 
     function student(){
-        // return $this->hasMany('App\User')
-        //     ->where('role_id',
-        //                 Role::where('name', 'student')
-        //                         ->first()
-        //                         ->id
-        //             );
-        return User::whereHas('role', function ($query) {
-            $query->where('name', 'student');
-        });
+        return $this->hasMany('App\User')
+                ->whereHas('role', function (Builder $query) {
+                    $query->where('name','student');
+                });
     }
 
 
