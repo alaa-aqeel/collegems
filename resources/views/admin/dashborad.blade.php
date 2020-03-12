@@ -13,9 +13,9 @@
               <div class="card-body">
                 <small class="card-title text-dark">Have {{ $users->count() }} Users </small>
                 <p class="card-text">
-                    {{ $users->where('role_id', 2)->count() }} student
+                    {{ $roles->where('name', 'student')->users()->count() }} student
                       |
-                    {{ $users->where('role_id', 1)->count() }} Admin</p>
+                    {{ $roles->where('name', 'admin')->users()->count()  }} Admin</p>
                 <p class="card-text"></p>
               </div>
             </div>

@@ -16,6 +16,7 @@ class AdminViewController extends Controller
     public function index(){
 
         return view('admin.dashborad', [
+            'roles' => Role::all(),
             'users' => User::all()->take(6),
             'colleges' => College::all(),
             'projects' => Project::all()->take(6),
@@ -50,7 +51,7 @@ class AdminViewController extends Controller
 
         $projects = Project::where('active',  !!$active);
 
-        
+
         if ( $collegeid = $request->query('college') ){
             $projects = $projects->where('college_id', $collegeid);
         }

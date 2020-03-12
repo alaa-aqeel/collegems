@@ -12,16 +12,16 @@
     <tbody>
         @foreach ($items as $item)
             <tr>
-                <th name='id'> {{ $item->id }} </th>  
-                <th style="text-transform: capitalize" name='name'> {{ $item->name }} </th>   
-                <th name='user'> {{ $item->users->count() }} </th>   
+                <th name='id'> {{ $item->id }} </th>
+                <th style="text-transform: capitalize" name='name'> {{ $item->name }} </th>
+                <th name='user'> {{ $item->student->count() }} </th>
+                <th name='admins'> {{ $item->admin->count() }} </th>
                 <th name='project'> {{ $item->projects->count() }} </th>
-                <th name='admins'> {{ $item->admin->count() }} </th> 
-                <th name='action'> 
-                    <button class="btn btn-outline-danger delete_college" onclick='delete_college(event, {{ $item->id }})'> 
-                        <i class="fa fa-trash"></i> 
-                    </button> 
-                </th> 
+                <th name='action'>
+                    <button class="btn btn-outline-danger delete_college" onclick='delete_college(event, {{ $item->id }})'>
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </th>
             </tr>
         @endforeach
     </tbody>
