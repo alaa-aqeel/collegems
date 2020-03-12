@@ -34,11 +34,11 @@
                         @endif
                         @if(Auth::user()->role->name == 'admin')
                             <li class="nav-item">
-                                <a class="dropdown-item" href="/admin"> CPanel</a>
+                                <a class="dropdown-item" href="/admin"> <i class="fa fa-shield"></i> CPanel</a>
                             </li>
                         @endif
                         {{-- <li><a class="dropdown-item" href="/news"><img src="/icon/new.png" alt=""> artcal</a> </li> --}}
-                        <li> <a class="dropdown-item" href="/about"> about</a></li>
+                        <li> <a class="dropdown-item" href="/about"> <i class="fa fa-info"></i> about</a></li>
                         <li>
                             <a class="dropdown-item text-danger" href="/logout"><i class="fa fa-sign-out"></i> Log Out</span></a>
                         </li>

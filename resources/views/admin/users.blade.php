@@ -79,20 +79,26 @@
                 </button>
                 </div>
                 <div class="modal-body">
-                    <div class="p-0 m-auto" style="width: 30%;">
-                        <img  id='0-avatar' src="/storage/images/users/471a1ad342659289433e05a611d206f8.png" class="img-thumbnail border-0 " />
-                        <h4 id='userName' class="text-center mt-2"> User Name </h4>
+                    <div class="p-0 m-auto" style="width: 50%;">
+                        <img  id='user-avatar' src="/storage/images/users/471a1ad342659289433e05a611d206f8.png" class="img-thumbnail border-0 " />
+                        <h4 id='user-name' class="text-center mt-2"> User Name </h4>
+                        <p class="text-center">
+                            <a id='user-email' style="display: inline" href="#!"> email@local.com </a>
+                            <i id='user-valid' class="fa text-success" ></i>
+                            {{-- <span> Email is verified </span> --}}
+                        </p>
                         <hr>
+                        <strong >Project Have <span id='user-project'></span> </strong>
                     </div>
                     <div>
                         <div class="form-group text-center">
-                            <a id='userActive' href="#!"  class="btn-active btn btn-success">
+                            <a id='user-active' href="#!"  class="btn-active btn btn-success">
                                 {{-- btn-success @else btn-danger --}}
                                 <i class="fa fa-toggle-on text-white" ></i>
                             </a>
                         </div>
                         <div class="form-group m-auto" style="width: 50%">
-                            <select class="form-control" id="userRole">
+                            <select class="form-control" id="user-role">
                                 @foreach ($roles as $role)
                                     <option value='{{ $role->id }}'> {{ $role->name }} </option>
                                 @endforeach

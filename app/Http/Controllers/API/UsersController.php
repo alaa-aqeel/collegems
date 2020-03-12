@@ -59,6 +59,9 @@ class UsersController extends Controller
                 'fullname' => $user->fullname,
                 'active'   => $user->active,
                 'role'     => $user->role_id,
+                'email'    => $user->email,
+                'verified' => $user->email_verified_at,
+                'projects' => $user->projects()->count()
             ]
         ]);
     }
