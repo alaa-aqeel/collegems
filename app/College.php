@@ -21,16 +21,15 @@ class College extends Model
             );
     }
 
-    function user($rolename){
+    function student(){
         // return $this->hasMany('App\User')
         //     ->where('role_id',
         //                 Role::where('name', 'student')
         //                         ->first()
         //                         ->id
         //             );
-
         return User::whereHas('role', function ($query) {
-            $query->where('name', $rolename);
+            $query->where('name', 'student');
         });
     }
 
