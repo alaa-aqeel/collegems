@@ -29,7 +29,7 @@ class College extends Model
         //                         ->id
         //             );
 
-        return User::whereHas('roles', function ($query) {
+        return User::whereHas('role', function ($query) {
             $query->where('name', $rolename);
         });
     }
