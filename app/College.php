@@ -2,7 +2,7 @@
 
 namespace App;
 
-use App\Role;
+use App\User;
 use Illuminate\Database\Eloquent\Model;
 
 class College extends Model
@@ -21,13 +21,17 @@ class College extends Model
             );
     }
 
-    function student(){
-        return $this->hasMany('App\User')
-            ->where('role_id',
-                        Role::where('name', 'student')
-                                ->first()
-                                ->id
-                    );
+    function user($rolename){
+        // return $this->hasMany('App\User')
+        //     ->where('role_id',
+        //                 Role::where('name', 'student')
+        //                         ->first()
+        //                         ->id
+        //             );
+
+        return User::whereHas('roles', function ($query) {
+            $query->where('name', $rolename);
+        });
     }
 
 
