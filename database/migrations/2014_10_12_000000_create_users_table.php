@@ -27,7 +27,6 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('avatar')->default('avatar.png');
             $table->string('gender');
-            // $table->string('address')->nullable();
             $table->string('work')->nullable();
             $table->string('github')->nullable();
 
@@ -35,7 +34,7 @@ class CreateUsersTable extends Migration
             $table->tinyInteger('active')->default(0);
 
             $table->timestamp('email_verified_at')->nullable();
-            // $table->rememberToken();
+            $table->rememberToken();
             $table->timestamps();
         });
 
