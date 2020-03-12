@@ -18,20 +18,20 @@ $(function(){
             $(this).html('Add')
             $('#table_college').find('tbody').append(`
                     <tr>
-                        <th name='id'> ${resp.data.college.id} </th>  
-                        <th style="text-transform: capitalize" name='name'> ${$('#add_college input').val()} </th>   
-                        <th name='user'>0</th>   
+                        <th name='id'> ${resp.data.college.id} </th>
+                        <th style="text-transform: capitalize" name='name' onclick='delete_college(event, ${resp.data.college.id})> ${$('#add_college input').val()} </th>
+                        <th name='user'>0</th>
                         <th name='project'>0</th>
-                        <th name='admins'>0</th> 
-                        <th name='action'> 
-                            <button class="btn btn-outline-danger delete_college" > 
-                                <i class="fa fa-trash"></i> 
-                            </button> 
-                        </th> 
+                        <th name='admins'>0</th>
+                        <th name='action'>
+                            <button class="btn btn-outline-danger delete_college" >
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </th>
                     </tr>
                 `);
         })
-        
+
     });
 
     window.delete_college = function (e, id){
@@ -41,5 +41,5 @@ $(function(){
             $(target.parent().parent()).remove()
         })
     }
-    
+
 })
