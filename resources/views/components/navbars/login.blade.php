@@ -27,11 +27,19 @@
                     <ul class="dropdown-menu profile" aria-labelledby="navbarDropdownMenuLink">
                         <i class="fa fa-caret-up fa-5x  triangle-up visible-sm"></i>
                         <li> <a class="dropdown-item" href="/profile"> <i class="fa fa-user"></i> profile</a></li>
-                        @if(Auth::user()->active)
-                            <li> <a class="dropdown-item" href="/project/create">
-                                <i class="fa fa-plus-circle"></i> Add Project
-                            </a></li>
-                        @endif
+
+                            <li>
+                                @if(Auth::user()->active)
+                                    <a class="dropdown-item" href="/project/create">
+                                @else
+                                    <a class="dropdown-item text-danger" href="#1" title="Need active to add">
+                                @endif
+
+                                    <i class="fa fa-plus-circle"></i> Add Project
+                                </a>
+                            </li>
+
+
                         @if(Auth::user()->role->name == 'admin')
                             <li class="nav-item">
                                 <a class="dropdown-item" href="/admin"> <i class="fa fa-shield"></i> CPanel</a>
