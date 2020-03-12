@@ -1,6 +1,6 @@
 @extends('layouts.base')
 
-@section('title', 'Reset Password')
+@section('title', 'Forgot Password')
 
 @section('layout')
     <div class="lContainer">
@@ -24,7 +24,7 @@
                         </div>
                     @endif
                     @csrf
-                    <h2 style="border-left: 4px solid #6c63ff;text-align: center" class='mb-2'>{{ __('Reset Password') }}</h2>
+                    <h2 style="border-left: 4px solid #6c63ff;text-align: center" class='mb-2'>{{ __('Forgot Password') }}</h2>
                     <div class="form-group">
                             <span class="input-icons">
                                 <i class="fa fa-envelope fa-2x"></i>

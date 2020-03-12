@@ -20,7 +20,7 @@
                 <div class="row">
                     {{ $users }}
                     @foreach ($users as $user)
-                        <div class="col-4" id='{{ $user->id."-card" }}'>
+                        <div class="col-4 mb-3" id='{{ $user->id."-card" }}'>
                             <div class="d-flex flex-row border rounded">
                                     <div class="p-0 " style="width: 40%;">
                                         <img  id='{{ $user->id }}-avatar' src="{{ $user->getAvatar() }}" class="img-thumbnail border-0 " />

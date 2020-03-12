@@ -17,7 +17,7 @@
                 </div>
                 <div class="row">
                     @foreach ($projects as $project)
-                        <div class="col-4">
+                        <div class="col-4 mb-3">
                             <div class="card mb-" >
                                 <div class="row no-gutters">
                                     <div class="col-12">
