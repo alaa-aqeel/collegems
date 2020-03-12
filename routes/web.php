@@ -17,7 +17,6 @@ Auth::routes(['verify' => true]);
 
 Route::get('/', 'HomeController@index');
 
-
 Route::view('/about', 'about');
 Route::get('/tranining', 'TraniningController@index');
 Route::get('/projects', 'ProjectController@index');

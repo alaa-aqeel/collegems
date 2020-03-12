@@ -36,6 +36,12 @@
                             Your Account need active from your college. wait 24hours to active
                         </h5>
                     </div>
+                @elseif(!Auth::user()->email_verified_at)
+                    <div class="text-center">
+                        <h5 class='text-secondary'>
+                            Please check your email for a verification link.
+                        </h5>
+                    </div>
                 @endif
                 <div class="row">
                     @if($projects)
