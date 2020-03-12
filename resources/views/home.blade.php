@@ -31,9 +31,9 @@
             <!-- Demo content -->
                 <!--end header-->
                 @if(!Auth::user()->active && Auth::user()->email_verified_at )
-                    <div class="text-ceneter">
+                    <div class="text-center">
                         <h5 class='text-secondary'>
-                            Your Account need active from your college. wait to 24hours plase to active
+                            Your Account need active from your college. wait 24hours to active
                         </h5>
                     </div>
                 @endif
