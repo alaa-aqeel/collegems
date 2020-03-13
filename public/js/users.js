@@ -12,6 +12,8 @@ $(function(){
             $('#settingModal #user-role').val(resp.data.user.role)
             $('#settingModal #user-active').val(resp.data.user.active)
             $('#settingModal #user-email').text(resp.data.user.email)
+            $('#settingModal #user-college').text(resp.data.user.college)
+            $('#settingModal #user-stage').text(resp.data.user.stage)
             $('#settingModal #user-valid').removeClass('text-success text-danger fa-check fa-remove');
             $('#settingModal #user-valid').addClass(resp.data.user.verified ? 'fa-check text-success' : 'fa-remove text-danger')
             $('#settingModal #user-project').text(resp.data.user.projects)

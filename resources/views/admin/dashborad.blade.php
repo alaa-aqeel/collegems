@@ -92,23 +92,23 @@
                   <i class="fa fa-plus"></i>
                 </button>
                 <div class="modal fade" id="staticBackdrop" data-backdrop="static">
-                  <div class="modal-dialog" >
-                    <form id="add_college" onsubmit="event.preventDefault()">
-                      <div class="modal-content">
-                        <div class="modal-body">
-                            <div class="form-group">
-                              <label for="image"> College Name </label>
-                              <input type="text" class="form-control" id="input_college" placeholder="Name College">
+                    <div class="modal-dialog" >
+                        <form id="add_college" onsubmit="event.preventDefault()">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                <label for="image"> College Name </label>
+                                <input type="text" class="form-control" id="input_college" placeholder="Name College">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id='btn_add_college' >Add</button>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                          <button type="button" class="btn btn-primary" id='btn_add_college' >Add</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-              </div>
+                        </form>
+                    </div>
+                </div>
             </div>
             <div class="container" style="margin-top: 10px">
                 <div class="card-body" >

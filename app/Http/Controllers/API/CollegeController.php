@@ -13,7 +13,6 @@ class CollegeController extends Controller
 
         $validator = Validator::make($request->all(), [
             'name'  => 'required|unique:colleges',
-            // 'img'   => 'image',
         ]);
 
         if ($validator->fails()) {
@@ -25,14 +24,6 @@ class CollegeController extends Controller
             'name' => $request->name
         ]);
 
-        // if ($request->img){
-        //     $image = md5_file($request->img).'.'.$request->img->extension();
-        //     if(!file_exists(storage_path("public/images/projects/$image"))){
-        //         $request->img->storeAs('/public/images/projects/',$image);
-        //     }
-        //     $college->img = $image;
-        //     $college->save();
-        // }
 
         return response()->json([
             'msg' => 'Successfuly add college',
@@ -43,8 +34,29 @@ class CollegeController extends Controller
     }
 
     public function destroy($id){
+        $college = College::find($id);
+
+        if (!$college){
+            return response()->json(['msg' => 'NOT FOUND'], 404);
+        }
         College::find($id)->delete();
 
         return response()->json(['msg' => 'Successfuly delete College']);
+    }
+
+    public function update(Request $request, $id){
+        $college = College::find($id);
+
+        if (!$college){
+            return response()->json(['msg' => 'NOT FOUND'], 404);
+        }
+
+        $college->update([
+            'name' => $request->name
+        ]);
+
+        $college = College::find($id);
+
+        return response()->json(['msg' => 'Successfuly update']);
     }
 }

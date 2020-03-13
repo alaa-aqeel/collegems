@@ -27,11 +27,9 @@
                                     </div>
                                     <div class="pl-3 pt-2 pr-2 pb-2 w-75 border-left">
                                         <h4 class="text-dark"> <a href="/profile/{{$user->id}}"></a> {{ $user->fullname }}</h4>
-                                        <h6 class="text-dark" style="text-transform: capitalize">
+                                        <p class="text-dark" style="text-transform: capitalize">
                                             {{ $user->college ? $user->college->name  : 'None' }}
-                                            |
-                                            {{ $user->stage ? $user->stage->stage : 'None' }}
-                                        </h6>
+                                        </p>
                                         <ul class="m-0 float-left" style="list-style: none; margin:0; padding: 0">
                                             <li>
                                                 <a target="_blank" href="https://github.com/{{ $user->github }}" class="text-dark">
@@ -83,6 +81,7 @@
                         <img  id='user-avatar' src="/storage/images/users/471a1ad342659289433e05a611d206f8.png" class="img-thumbnail border-0 " />
                         <h4 id='user-name' class="text-center mt-2"> User Name </h4>
                         <p class="text-center">
+                            <span id='user-college'> </span> | <span id='user-stage'></span> <br>
                             <a id='user-email' style="display: inline" href="#!"> email@local.com </a>
                             <i id='user-valid' class="fa text-success" ></i>
                             {{-- <span> Email is verified </span> --}}

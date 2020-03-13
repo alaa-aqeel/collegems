@@ -1,4 +1,22 @@
 <table class="table table-hover" id='table_college'>
+    <div class="modal fade" id="modal-edit-college" data-backdrop="static">
+        <div class="modal-dialog" >
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="name_college"> College Name </label>
+                        <input type="text" class="form-control" id="name_college" placeholder="Name College">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary btn_edit_college" >
+                    Save
+                </button>
+                </div>
+            </div>
+        </div>
+    </div>
     <thead>
         <tr>
             <th scope="col">id</th>
@@ -11,7 +29,7 @@
     </thead>
     <tbody>
         @foreach ($items as $item)
-            <tr>
+            <tr class='row-{{ $item->id }} '>
                 <th name='id'> {{ $item->id }} </th>
                 <th style="text-transform: capitalize" name='name'> {{ $item->name }} </th>
                 <th name='user'> {{ $item->student->count() }} </th>
