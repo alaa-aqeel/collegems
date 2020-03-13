@@ -20,18 +20,18 @@
                 <div class="row">
                     {{ $users }}
                     @foreach ($users as $user)
-                        <div class="col-4 mb-3" id='{{ $user->id."-card" }}'>
+                        <div class="col-md-4 col-6 mb-3" id='{{ $user->id."-card" }}'>
                             <div class="d-flex flex-row border rounded">
                                     <div class="p-0 " style="width: 40%;">
-                                        <img  id='{{ $user->id }}-avatar' src="{{ $user->getAvatar() }}" class="img-thumbnail border-0 " />
+                                        <img  id='{{ $user->id }}-avatar' src="{{ $user->getAvatar() }}" class="img-thumbnail border-0  mx-auto d-block" />
                                     </div>
                                     <div class="pl-3 pt-2 pr-2 pb-2 w-75 border-left">
                                         <h4 class="text-dark"> <a href="/profile/{{$user->id}}"></a> {{ $user->fullname }}</h4>
-                                        <h5 class="text-dark" style="text-transform: capitalize">
+                                        <h6 class="text-dark" style="text-transform: capitalize">
                                             {{ $user->college ? $user->college->name  : 'None' }}
                                             |
                                             {{ $user->stage ? $user->stage->stage : 'None' }}
-                                        </h5>
+                                        </h6>
                                         <ul class="m-0 float-left" style="list-style: none; margin:0; padding: 0">
                                             <li>
                                                 <a target="_blank" href="https://github.com/{{ $user->github }}" class="text-dark">

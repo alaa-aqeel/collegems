@@ -12,6 +12,8 @@ $(function(){
         SidebarCollapse();
     });
 
+
+
     $('#btn_add_college').click(function(){
         $(this).html('<i class="fa fa-spinner fa-pulse" aria-hidden="true"></i>')
         axios.post("/api/college",{name: $('#add_college input').val()}).then(resp=>{
@@ -19,12 +21,15 @@ $(function(){
             $('#table_college').find('tbody').append(`
                     <tr>
                         <th name='id'> ${resp.data.college.id} </th>
-                        <th style="text-transform: capitalize" name='name' onclick='delete_college(event, ${resp.data.college.id})> ${$('#add_college input').val()} </th>
+                        <th style="text-transform: capitalize" name='name' > ${$('#add_college input').val()} </th>
                         <th name='user'>0</th>
                         <th name='project'>0</th>
                         <th name='admins'>0</th>
                         <th name='action'>
-                            <button class="btn btn-outline-danger delete_college" >
+                            <button class="btn btn-outline-danger delete_college" onclick='delete_college(event, ${resp.data.college.id})>
+                                <i class="fa fa-trash"></i>
+                            </button>
+                            <button class="btn btn-outline-danger delete_college" onclick='edit_college(event, ${resp.data.college.id})>
                                 <i class="fa fa-trash"></i>
                             </button>
                         </th>
@@ -40,6 +45,10 @@ $(function(){
         axios.delete("/api/college/"+id).then(resp=>{
             $(target.parent().parent()).remove()
         })
+    }
+
+    window.edit_college = function(e, id){
+        //
     }
 
 })
