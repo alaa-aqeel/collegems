@@ -23,7 +23,7 @@
                         <div class="col-md-4 col-6 mb-3" id='{{ $user->id."-card" }}'>
                             <div class="d-flex flex-row border rounded">
                                     <div class="p-0 " style="width: 40%;">
-                                        <img  id='{{ $user->id }}-avatar' src="{{ $user->getAvatar() }}" class="img-thumbnail border-0  mx-auto d-block" />
+                                        <img  id='{{ $user->id }}-avatar' src="{{ $user->getAvatar() }}" class="img-thumbnail mx-auto d-block" />
                                     </div>
                                     <div class="pl-3 pt-2 pr-2 pb-2 w-75 border-left">
                                         <h4 class="text-dark"> <a href="/profile/{{$user->id}}"></a> {{ $user->fullname }}</h4>
