@@ -764,12 +764,12 @@
     margin-left: 230px;
   }
 
-  /* .page-content {
+  .page-content {
     width: calc(100% - 19rem);
     margin-left: 13rem;
     transition: all 0.4s;
     margin-top: 40px;
-  } */
+  }
 
   .page-content .visible-sm {
     display: none !important;
@@ -808,6 +808,8 @@
     width: 100%;
     margin: 0% auto;
   }
+
+
 
   /* .navbar-expand-lg .ml-4 .navbar-nav .nav-link {
     padding-right: 2.5rem;
