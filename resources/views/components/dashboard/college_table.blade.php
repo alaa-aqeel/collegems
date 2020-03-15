@@ -39,7 +39,7 @@
                     <button class="btn btn-outline-danger delete_college" onclick='delete_college(event, {{ $item->id }})'>
                         <i class="fa fa-trash"></i>
                     </button>
-                    <button class="btn btn-outline-primary edit_college" onclick='edit_college(event, {{ $item->id }})'>
+                    <button class="btn btn-outline-primary edit_college" onclick='edit_college({{ $item->id }})'>
                         <i class="fa fa-edit"></i>
                     </button>
                 </th>

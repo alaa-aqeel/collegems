@@ -44,6 +44,7 @@ $(function(){
     }
 
     $('.btn_edit_college').click(function(){
+
         let row  = $(`#table_college .row-${$(this).attr('id')}`);
         let newname = $('#modal-edit-college input#name_college').val()
         $(this).html('<i class="fa fa-spinner fa-pulse"></i>')
