@@ -5,7 +5,8 @@ $(function(){
 
     $('a.setting').click(function(e){
         $(this).find('.fa').toggleClass('fa-spin');
-        axios.get(`/api/user/${$(this).parent().attr('id')}`).then(resp=>{
+
+        axios.get(`/api/user/${ $(this).parent().attr('id') }`).then(resp=>{
 
             $('#settingModal #user-avatar').attr('src', resp.data.user.avatar)
             $('#settingModal #user-name').text(resp.data.user.fullname)
@@ -17,8 +18,9 @@ $(function(){
             $('#settingModal #user-valid').removeClass('text-success text-danger fa-check fa-remove');
             $('#settingModal #user-valid').addClass(resp.data.user.verified ? 'fa-check text-success' : 'fa-remove text-danger')
             $('#settingModal #user-project').text(resp.data.user.projects)
-            $('#settingModal #saveChanges').attr('id', $(this).parent().attr('id') ).attr('disabled', false).text('Save')
-            $('#settingModal #deleteUser').attr('id', $(this).parent().attr('id') ).attr('disabled', false).text('Delete Account')
+
+            $('#settingModal .saveChanges').attr('id', $(this).parent().attr('id') ).attr('disabled', false).text('Save')
+            $('#settingModal .deleteUser').attr('id', $(this).parent().attr('id') ).attr('disabled', false).text('Delete Account')
 
             if(resp.data.user.active != 0){
                 $('#settingModal #user-active').addClass('btn-success').removeClass('btn-danger')

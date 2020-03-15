@@ -42,7 +42,7 @@
                                             </li>
                                         </ul>
                                         <p id='{{ $user->id }}' class="text-right m-0" >
-                                            <a href="#!" class="btn btn-primary setting" disabled>
+                                            <a href="#!" class="btn btn-primary setting" >
                                                 <i class="fa fa-cog "></i>
                                             </a>
                                             {{-- <a href="#!"  class="btn-active btn @if($user->active) btn-success @else btn-danger @endif ">
@@ -109,8 +109,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button id='saveChanges' type="button" class="btn btn-primary"> <i class="fa fa-save"></i> </button>
-                    <button id='deleteUser' type="button" class="btn btn-danger float-left" >
+                    <button id='saveChanges' type="button" class="saveChanges btn btn-primary"> <i class="fa fa-save"></i> </button>
+                    <button id='deleteUser' type="button" class="deleteUser btn btn-danger float-left" >
                         {{-- <i class="fa fa-trash" aria-hidden="true"></i> --}}
                     </button>
                 </div>
