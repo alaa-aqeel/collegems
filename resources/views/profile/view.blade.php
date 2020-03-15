@@ -10,7 +10,7 @@
         <div class="user_info">
             <div class="circle">
                 <img class="profile-pic" style="max-width: 100%;width: 100%;"
-                src="{{ Auth::user()->getAvatar() }}">
+                src="{{ $user->getAvatar() }}">
             </div>
             @if($auth)
                 <div class="p-image">
