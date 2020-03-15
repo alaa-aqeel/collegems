@@ -85,15 +85,12 @@ class RegisterController extends Controller
             'fullname' => $data['fullname'],
             'gender'   => $data['gender'],
             'email'    => $data['email'],
-            // 'role_id'  => $role->id,
-            // 'stage_id' => $data['stage'],
-            // 'college_id' => $data['college'],
             'password' => Hash::make($data['password']),
         ]);
 
         $role = Role::where('name', 'student')->first();
         $college =  College::find($data['college']);
-        $stage  =  Stage::find($data['college']);
+        $stage  =  Stage::find($data['stage']);
 
         $user->role()->associate($role);
         $user->college()->associate($college);

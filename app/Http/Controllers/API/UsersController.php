@@ -62,8 +62,8 @@ class UsersController extends Controller
                 'email'    => $user->email,
                 'verified' => $user->email_verified_at,
                 'projects' => $user->projects()->count(),
-                'stage'    => $user->stage->stage,
-                'college'  => $user->college->name
+                'stage'    => $user->stage ? $user->stage->stage  : null ,
+                'college'  => $user->college ? $user->college->name : null
             ]
         ]);
     }
