@@ -39,8 +39,10 @@ class ProfileController extends Controller
     }
 
     public function show(Request $request, $username){;
+        $user = User::where('username', $username)->first();
+        abort_unless($user, 404);
         return view('profile.view', [
-            'user' => User::where('username', $username)->first(),
+            'user' =>  $user,
             'auth' => auth()->user() ? auth()->user()->username == $username : false,
         ]);
     }
