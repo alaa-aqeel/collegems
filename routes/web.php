@@ -20,7 +20,7 @@ Route::get('/', 'HomeController@index');
 Route::view('/about', 'about');
 Route::get('/tranining', 'TraniningController@index');
 Route::get('/projects', 'ProjectController@index');
-Route::get('/projects/{slug}', 'ProjectController@show')->where('slug', '[0-9A-Za-z\-]+');
+Route::get('/projects/{slug}', 'ProjectController@show')->where('slug', '[A-Za-z\-]+');
 Route::get('/user/{username}', 'ProfileController@show')->where('username', '[0-9A-Za-z\_\.]+');
 
 Route::middleware(['auth'])->group(function () {

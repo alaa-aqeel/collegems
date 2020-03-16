@@ -28,6 +28,7 @@ class ProjectController extends Controller
     public function show(Request $request, $slug){
 
         $college = College::where('slug', $slug)->first();
+        abort_unless($college, 404);
 
         $project =  $college->projects()->where('active',  1);
 
