@@ -13,8 +13,14 @@ class CollegesTableSeeder extends Seeder
     public function run()
     {
         DB::table('colleges')->insert([
-            ['name' => 'math'],
-            ['name' => 'computer'],
+            [
+                'name' => 'college of math',
+                'slug' => 'college-of-math'
+            ],
+            [
+                'name' => 'college of computer',
+                'slug' => 'college-of-computer'
+            ],
         ]);
     }
 }

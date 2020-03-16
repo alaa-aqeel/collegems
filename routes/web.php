@@ -20,8 +20,8 @@ Route::get('/', 'HomeController@index');
 Route::view('/about', 'about');
 Route::get('/tranining', 'TraniningController@index');
 Route::get('/projects', 'ProjectController@index');
-Route::get('/projects/{collegeid}', 'ProjectController@show')->where('collegeid', '[0-9]+');
-Route::get('/user/{id}', 'ProfileController@show')->where('id', '[0-9]+');
+Route::get('/projects/{slug}', 'ProjectController@show')->where('slug', '[0-9A-Z\-]+');
+Route::get('/user/{username}', 'ProfileController@show')->where('username', '[0-9A-Z_\.]+');
 
 
 Route::middleware(['auth'])->group(function () {

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use App\College;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -21,7 +22,8 @@ class CollegeController extends Controller
         }
 
         $college = College::create([
-            'name' => $request->name
+            'name' => $request->name,
+            'slulg' => Str::slug($request->name,'-')
         ]);
 
 
@@ -52,7 +54,8 @@ class CollegeController extends Controller
         }
 
         $college->update([
-            'name' => $request->name
+            'name'  => $request->name,
+            'slulg' => Str::slug($request->name,'-')
         ]);
 
         $college = College::find($id);

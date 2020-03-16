@@ -22,6 +22,7 @@ class UsersTableSeeder extends Seeder
             'email'    => 'admin@local.com',
             'avatar'   => 'avatar.png',
             'gender'   => 'male',
+            'username' => 'admin',
             'active'   => 1,
             'email_verified_at' => \Carbon\Carbon::now(),
             'password' => Hash::make('12345678')

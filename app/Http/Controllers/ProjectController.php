@@ -25,9 +25,9 @@ class ProjectController extends Controller
         ]);
     }
 
-    public function show(Request $request, $collegeid){
+    public function show(Request $request, $slug){
 
-        $college = College::find($collegeid);
+        $college = College::where('slug', $slug)->first();
 
         $project =  $college->projects()->where('active',  1);
 

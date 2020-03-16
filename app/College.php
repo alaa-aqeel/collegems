@@ -11,7 +11,7 @@ class College extends Model
 {
 
     protected $fillable = [
-        'name', 'img'
+        'name', 'slug'
     ];
 
     function admin(){
