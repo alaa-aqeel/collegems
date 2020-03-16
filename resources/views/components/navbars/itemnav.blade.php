@@ -14,7 +14,7 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <i class="fa fa-caret-up fa-5x  triangle-up"></i>
                 @foreach ($colleges as $college)
-                    <li><a class="dropdown-item" href="/projects/{{$college->id}}"> {{$college->name}} </a></li>
+                    <li><a class="dropdown-item" href="/projects/{{$college->slug}}"> {{$college->name}} </a></li>
                 @endforeach
             </ul>
         </li>
