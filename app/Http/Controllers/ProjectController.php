@@ -98,9 +98,7 @@ class ProjectController extends Controller
     public function edit(Request $request, $id){
         $project =  auth()->user()->projects()->find($id); // Project::find($id);
 
-        if (!$project){
-            return redirect()->back();
-        }
+        abort_unless($project, 404);
 
         return view('editproject',[ 'project' => Project::find($id)]);
 
@@ -109,8 +107,16 @@ class ProjectController extends Controller
     public function update(Request $request, $id){
         $project =  auth()->user()->projects()->find($id);
 
-        if (!$project){
-            return redirect()->back();
+        abort_unless($project, 404);
+
+        $validator = Validator::make($request->all(), [
+            'name'  => 'unique:projects',
+            'image' => 'image',
+        ]);
+
+        if ($validator->fails()) {
+
+            return redirect()->back()->withErrors($validator);
         }
 
         if($request->image){
@@ -125,15 +131,11 @@ class ProjectController extends Controller
 
         $project->update($request->input());
 
+        $request->session()->flash('success', "Successful update `$project->name` ");
+
         return redirect()->back();
     }
 
-    // public function destroy(){
-    //     auth()->user()
-    //             ->projects()
-    //             ->find($id)
-    //             ->delete();
-    //     return redirect()->back();
-    // }
+
 
 }

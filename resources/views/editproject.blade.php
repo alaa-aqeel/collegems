@@ -6,6 +6,7 @@
 
     <div class="add_project">
         <div class="container">
+
             <h1 class="add-titel text-center">
                 Edit project
             </h1>
@@ -22,6 +23,11 @@
             </form>
 
         </div>
+        @if(session()->get('success'))
+            <div class="alert alert-success" style="position: fixed;right: 10px;top: 10%;">
+                <strong> {{ session()->get('success') }}</strong>
+            </div>
+        @endif
     </div>
 
 @endsection
