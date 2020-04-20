@@ -12,7 +12,7 @@
             </div>
             <div class="overviwe_card_info">
                 <p>
-                    <span class="c">C</span>an You join and upload your project <br> &amp; use <span>READ.ME</span> to write iead project
+                    <span class="c">C</span>an You join and upload your project <br> &amp; use <span> Your explicit name </span> to 
                 </p>
                 <div class="pdg" >
                     <a  class="btn btn-primary" href="{{ url('/register') }}">JOIN</a>
@@ -20,5 +20,7 @@
             </div>
         </div>
     </div>
+
+ 
 
 @endsection

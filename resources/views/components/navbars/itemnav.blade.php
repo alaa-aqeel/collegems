@@ -1,5 +1,5 @@
-<div class="collapse navbar-collapse ml-4" id="navbarSupportedContent">
-    <ul class="navbar-nav  @guest container @else mr-auto @endguest">
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav  @guest container @else mr-auto ml-4 @endguest">
 
         <li class="nav-item  ">
 
@@ -34,7 +34,6 @@
             </li>
 
         @endguest
-
     </ul>
     {{ $slot }}
 </div>
