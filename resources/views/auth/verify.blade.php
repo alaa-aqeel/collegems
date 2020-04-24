@@ -12,7 +12,9 @@
             </div>
         @endif
 
-        <h4 class="text-secondary"> {{ __('Before continuing, Please check your email for a verification link.') }} </h4>
+        <h4 class="text-secondary"> 
+            {{ __('Before continuing, Please check your email for a verification link.') }} 
+        </h4>
         <h5>
             {{ __('If you did not receive the email') }},
             <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">

@@ -55,8 +55,8 @@
 
 @section('layout')
 
-    <div class="rContainer">
-        <div class="l-rColumn   col-sm-12 col-lg-4" >
+    <div class="rContainer columnContainer">
+        <div class="l-rColumn  col-sm-12 col-lg-4" >
 
           <div class="card_login_header" style='margin-bottom: 10%'>
             <a href="{{ url('/') }}">

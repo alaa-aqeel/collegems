@@ -748,10 +748,12 @@
 
 @media (min-height: 650px) and (max-height: 850px) {
   /* body{
-    background-color: #7aa7d3
-} */
-  .overivwe,
-  .columnContainer {
+      background-color: #7aa7d3
+    } */
+  .overivwe{
     padding-top: 5%;
+  }
+  .columnContainer{
+    padding-top: 2.5%;
   }
 }

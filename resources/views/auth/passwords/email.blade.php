@@ -3,13 +3,14 @@
 @section('title', 'Forgot Password')
 
 @section('layout')
-    <div class="lContainer">
-            <div class="l-lColumn ">
-                <div class="card_login_header">
+
+    <div class="rContainer columnContainer">
+            <div class="l-lColumn">
+                <div class="card_login_header" style='margin-bottom: 10%'>
                     <a href="{{ url('/') }}">
-                        <i class="fa fa-home fa-2x"></i>
+                      <i class="fa fa-home fa-2x"></i>
                     </a>
-                </div>
+                  </div>
                 <div class="conta card_login_img  col-sm-12 col-lg-4">
                     <img class="img" src="{{ asset('image/signIn.png') }}" alt="img-siginUp">
 
@@ -24,18 +25,36 @@
                         </div>
                     @endif
                     @csrf
-                    <h2 style="border-left: 4px solid #6c63ff;text-align: center" class='mb-2'>{{ __('Forgot Password') }}</h2>
+                    <h2 style="border-left: 4px solid #6c63ff;text-align: center" class='mb-2'>
+                        {{ __('Forgot Password') }}
+                    </h2>
+
                     <div class="form-group">
                             <span class="input-icons">
                                 <i class="fa fa-envelope fa-2x"></i>
                             </span>
-                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" placeholder="{{ __('E-Mail Address') }}" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            <input required 
+                                id="email" 
+                                type="email" 
+                                class="form-control @error('email') is-invalid @enderror"
+                                 placeholder="{{ __('E-Mail Address') }}" 
+                                 name="email" value="{{ old('email') }}" 
+                                  
+                                 autocomplete="email" >
 
                             @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
+                    </div>
+
+                    <div class="justify-content-between">
+                        <div class="passforget custom-control  ">
+                            <a href='/login' class="text-secondary" >
+                                Login
+                            </a>
+                        </div>
                     </div>
 
                     <div class="form-group ">

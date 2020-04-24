@@ -83,7 +83,7 @@
 
 @section('layout')
 
-    <div class="lContainer">
+    <div class="lContainer columnContainer">
             <div class="l-lColumn ">
                 <div class="card_login_header">
                     <a href="{{ url('/') }}">
