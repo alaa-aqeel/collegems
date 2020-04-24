@@ -9,7 +9,7 @@
         <div class="container">
 
             <div class="about_logo">
-            <img src="{{ asset('image/logo2.png') }}" alt="logoCode4Iraq">
+                <img src="{{ asset('image/logo2.png') }}" alt="logoCode4Iraq">
             </div>
             <div class="about-header">
                 <h5>Code For Iraq</h5>
@@ -18,7 +18,6 @@
                 <p>It is a non-profit humanitarian initiative aimed at serving the community through programming . </p>
             </div>
         </div>
-        
     </div>
     <!--end about info-->    
 
@@ -48,8 +47,8 @@
                             </div>
                         </div>
                     </center>
-                    </div>
-                    <!--end about card-->
+                </div>
+                <!--end about card-->
                          <!--start about card-->
                     <div class="col-sm-6 col-lg-3">
                         <center>
