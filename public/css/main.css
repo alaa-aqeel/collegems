@@ -1,16 +1,16 @@
 @font-face {
   font-family: "OpenSans-ExtraBold";
-  src: url("../Fonts/Open_Sans/OpenSans-ExtraBold.ttf");
+  src: url("../fonts/Open_Sans/OpenSans-ExtraBold.ttf");
 }
 
 @font-face {
   font-family: "OpenSans-Regular";
-  src: url("../Fonts/Open_Sans/OpenSans-Regular.ttf");
+  src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
 }
 
 @font-face {
   font-family: "OpenSans-SemiBold";
-  src: url("../Fonts/Open_Sans/OpenSans-SemiBold.ttf");
+  src: url("../fonts/Open_Sans/OpenSans-SemiBold.ttf");
 }
 
 /* color use in website
