@@ -5,9 +5,9 @@
             <div class="row">
                 <div class="info col-sm  text-sm-left">
                     <img src="{{asset('image/logo.png')}}">
-                    <p>Univeristy of wasit </p>
+                    <p>Univeristy Of Wasit </p>
                 </div>
-                <div class="info col-sm  text-sm-right">
+                <div class="info float-right col-sm  text-sm-right" >
                     <ul>
                         <li>
                             <a href="{{ route('login') }}"> {{ __('signin') }}</a>

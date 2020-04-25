@@ -78,6 +78,13 @@ body {
   margin-left: 11px;
 }
 
+.upper-bar .container{
+    padding-right: auto !important;
+    padding-left: auto !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
 /* .nav-item a{
     font-family: 'OpenSans-SemiBold';
     color: #fff;

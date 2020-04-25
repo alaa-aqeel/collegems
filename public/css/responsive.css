@@ -369,8 +369,8 @@
 @media (min-width: 320px) and (max-width: 480px) {
   .tranining-card .container {
     margin-right: 15px !important;
-    padding-right: 14px;
-    padding-left: 14px;
+    padding-right: 14px  !important;
+    padding-left: 14px  !important;
     /* padding: 44px; */
   }
 }
