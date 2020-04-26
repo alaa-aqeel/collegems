@@ -69,10 +69,10 @@
     text-align: right !important;
   }
   .container {
-    padding-right: 0px;
-    padding-left: auto;
-    margin-right: auto;
-    margin-left: auto;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
   }
   .text-sm-right {
     text-align: right !important;

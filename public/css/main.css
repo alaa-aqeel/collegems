@@ -75,7 +75,7 @@ body {
   height: 55px;
   margin-top: 10px;
   float: left;
-  margin-left: 11px;
+  /* margin-left: 11px; */
 }
 
 .upper-bar .container{
